@@ -1,0 +1,20 @@
+<div class="container home">
+	<div class="row">
+	  <div class="col-md-6 col-md-offset-3">
+	  	<h3>Log in here</h3>
+
+		<%= form_for(:session, url: login_path) do |f| %>
+
+	      <%= f.label :email %>
+	      <%= f.text_field :email, class: 'form-control' %>
+
+	      <%= f.label :password %>
+	      <%= f.password_field :password, class: 'form-control' %>
+
+	      <%= f.submit "Log in!", class: "btn btn-primary" %>
+
+	    <% end %>
+	    <p>Don't have an account? <%= link_to "Sign up now!", signup_path %></p>
+	</div>
+  </div>
+</div>

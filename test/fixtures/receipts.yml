@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store: MyString
+  credit_card: MyString
+  card_num: 
+  subtotal: 
+  total: 
+
+two:
+  store: MyString
+  credit_card: MyString
+  card_num: 
+  subtotal: 
+  total: 

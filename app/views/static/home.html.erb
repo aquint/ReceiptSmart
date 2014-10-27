@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <div class="container">
+	  <div class="row">
+		  <div class="col-md-12">
+			  <h1>Receipts</h1>	
+			  <% if logged_in? %>
+          		  <%= link_to "Log out", logout_path, method: "delete" %>
+          		  <%= link_to "Profile", current_user, class: 'btn btn-primary' %>
+		      <% else %>
+		      	  <%= link_to "Sign up", signup_path, class: 'btn btn-primary' %>
+		          <%= link_to "Log in", login_path, class: 'btn btn-primary' %>
+		      <% end %>
+		  </div>
+	  </div>
+  </div>
+</div>
