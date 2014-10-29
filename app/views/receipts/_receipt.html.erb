@@ -1,0 +1,8 @@
+<li id="receipt-<%= receipt.id %>">
+  <span class="user"><%= link_to receipt.user.name, receipt.user %></span>
+  <span class="subtotal"><%= receipt.subtotal %></span>
+  <span class="total"><%= receipt.total %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(receipt.created_at) %> ago.
+  </span>
+</li>

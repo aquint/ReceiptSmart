@@ -1,0 +1,25 @@
+<% if @user.receipts.any? %>
+	  <h3>Receipts (<%= @user.receipts.count %>)</h3>
+	  <%= will_paginate @receipts %>
+	  <div class="panel panel-default">
+		  <table class="receipts table">
+		  		<tr>
+		  			<th>Date</th>
+		  			<th>Merchant</th>
+		  			<th>Credit Card</th>
+		  			<th>Subtotal</th>
+		  			<th>Total</th>
+		  		</tr>
+		  		<% @receipts.reverse_each do |receipt| %>
+				    <tr>
+				    	<td><%= l receipt.created_at, format: :short %></td>
+				      	<td><%= receipt.store %></td>
+				        <td><%= receipt.credit_card %></td>
+				        <td><%= receipt.subtotal %></td>
+				        <td><%= receipt.total %></td>
+				    </tr>
+				<% end %>
+		  </table>
+	  </div>
+	  <%= will_paginate @receipts %>
+<% end %>

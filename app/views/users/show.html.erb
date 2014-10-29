@@ -1,8 +1,84 @@
-<div class="container">
-	<div class="row show-post">
-		<div class="col-md-12">
-			<h1><%= @user.name %></h1>
-			<h2><%= @user.email %></h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active"><a href="#"><i class="fa fa-user"></i> <%= @user.name %></a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Export</a></li>
+      </ul>
+    </div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 dash">
+
+			<h1>My Receipts <small>Overview</small></h1>
+			
+			<hr>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-calculator fa-5x"></i>
+							<h3>Quick Stats</h3>
+						</div>
+						<h3>Monthly spending: $<%= @monthlytotal %></h3>
+						<h3>Receipts this month: 100</h3>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<% if logged_in? %>
+					      <section class="receipt_form">
+					        <%= render 'shared/receipt_form' %>
+					      </section>
+					<% end %>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-12 search">
+					<%= render 'receipts/search'%>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-12">
+							<h4>Filters</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<label>Credit Card</label>
+							<select value="credit_card">
+								<option></option>
+								<% @user.receipts.collect(&:credit_card).uniq.each do |creditcard| %>
+									<option value="<%= @user.id %>"><%= creditcard %></option>
+								<% end %>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<label>Merchant</label>
+							<select value="store">
+								<option></option>
+								<% @user.receipts.collect(&:store).uniq.each do |store| %>
+									<option value="<%= @user.id %>"><%= store %></option>
+								<% end %>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<h5>Month</h5>
+						</div>
+						<div class="col-md-3">
+							<h5>Sort</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row show-receipts">
+				<div class="col-md-12">
+			    		<%= render 'users/show_receipts' %>
+			  </div>
+			</div>
 		</div>
 	</div>
 </div>
