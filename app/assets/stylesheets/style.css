@@ -169,10 +169,98 @@
   height: 500px;
   margin-top: 50px;
 }
-
-.first .col-md-4 > .icon-container{
-  margin: 0 155px;
+.jumbotron h3{
+  color: #777;
+  font-size: 2em;
+  line-height: 1.5;
+  font-weight: 200;
 }
-.first .col-md-4 > h2{
+.jumbotron input.form-control{
+  width: 300px;
+  display: inline-block;
+  margin-right: 15px;
+  border: 3px solid #cccccc;
+  height: 50px;
+  font-size: 1.2em;
+  top: 3px;
+  position: relative;
+}
+.jumbotron .btn.btn-primary{
+  height: 48px;
+  width: 120px;
+  line-height: 2.1;
+  font-size: 1.2em;
+
+}
+.jumbotron>.container>.row>div p{
+  margin-top: 10px;
+}
+.jumbotron .signup{
+  margin-top: 25px;
+}
+
+/**** 
+** body
+****/
+
+.first .col-md-4 > img{
+  margin: 0 auto;
+  display: block;
+  height: 200px;
+  width: 200px;
+}
+.first .col-md-4 > h2, .first .col-md-4 > p{
   text-align: center;
+}
+.header h1{
+  text-align: center;
+}
+.header small{
+  font-weight: 200;
+}
+.app-stores{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#apple{
+  height: 58px;
+  width: 200px;
+}
+.plans{
+  margin-top: 25px;
+}
+.plan{
+  background-color: #eeeeee;
+  padding: 28px 20px;
+  padding-top: 5px;
+}
+.plan .heading h2, .plan .heading h4, .plan .price h2, .plan .details p{
+  text-align: center;
+}
+.plan .heading>h2{
+  color: #2e8bc9;
+}
+.plan .heading .num{
+  width: 50px;
+  height: 50px;
+  background-color: #2e8bc9;
+  color: #eeeeee;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.plan .heading .num h2{
+    line-height: 50px;
+}
+.plan .price h2{
+  color: #2e8bc9
+}
+
+/**** 
+** footer
+****/
+footer li{
+  list-style: none;
+}
+footer ul{
+  display: inline-block;
 }

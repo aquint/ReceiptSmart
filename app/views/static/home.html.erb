@@ -3,37 +3,150 @@
 	  <div class="row">
 		  <div class="col-md-8">
 			  <h1>Receipt Smart</h1>
-			  <h2>The fastest, most efficient receipt organization application out there. Get started in 3 simple steps today!</h2>	
-			  <% if logged_in? %>
-          		  <%= link_to "Profile", current_user, class: 'btn btn-primary' %>
-		      <% else %>
-		      	  <%= link_to "Sign up", signup_path, class: 'btn btn-primary' %>
-		          <%= link_to "Log in", login_path, class: 'btn btn-primary' %>
-		      <% end %>
+			  <h3>The fastest, most efficient receipt organization application out there. Get started with a FREE personal accoutn in 3 easy steps.</h3>
+			  <div class="signup">
+      		  <input class="form-control" placeholder="Email..."></input><%= link_to "Sign up!", signup_path, class: 'btn btn-primary' %>
+	      	  <p>Already have and account? <%= link_to "Log in", login_path , class: 'login' %></p>
+	      	  </div>
 		  </div>
 	  </div>
   </div>
 </div>
 <div class="container">
+	<div class="row header">
+		<div class="col-md-12">
+			<h1>Say goodbye to saving piles and piles of receipts.</h1>
+			<h1><small>Receipt Smart allows you to snap and store images of your receipts. Receipt Smart's 
+				OCR technology will extract the data, allowing you to seamlessly organize and manage your receipts.</small></h1>
+		</div>
+	</div>
+	<div class="row app-stores">
+		<div class="col-md-2 col-md-offset-4">
+			<img src="/assets/android.png">
+		</div>
+		<div class="col-md-2">
+			<img id="apple" src="/assets/Download_on_the_App_Store_Badge_US-UK_135x40.svg">
+		</div>
+	</div>
 	<div class="row first">
 		<div class="col-md-4">
+			<img src="/assets/download.png">
 			<h2>Download</h2>
-			<div class="icon-container"><i class="fa fa-download fa-5x"></i></div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 		</div>
 		<div class="col-md-4">
+			<img src="/assets/bolt.png">
 			<h2>Scan</h2>
-			<div class="icon-container"><i class="fa fa-flash fa-5x"></i></div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 		</div>
 		<div class="col-md-4">
+			<img src="/assets/trends.png">
 			<h2>Manage</h2>
-			<div class="icon-container"><i class="fa fa-folder-open fa-5x"></i></div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 		</div>
 	</div>
 	<hr>
 	<div class="row second">
 		<div class="col-md-8">
 			<h2>Choose the plan that's right for you.</h2>
-			
+		</div>
+	</div>
+	<div class="row plans">
+		<div class="col-md-4">
+			<div class="plan">
+				<div class="row">
+					<div class="col-md-12 heading">
+						<div class="num"><h2>1</h2></div>
+						<h2>Personal</h2>
+						<h4>For individual users to keep track of personal or buisiness expenses</h4>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-12 price">
+						<h2>FREE</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 details">
+							<p>Maximum one user</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="plan">
+				<div class="row">
+					<div class="col-md-12 heading">
+						<div class="num"><h2>2</h2></div>
+						<h2>Small Business</h2>
+						<h4>For smaller businiesses that need to manage their employee's expenses</h4>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-12 price">
+						<h2>$9.99/month</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 details">
+							<p>Maximum twenty employees</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="plan">
+				<div class="row">
+					<div class="col-md-12 heading">
+						<div class="num"><h2>3</h2></div>
+						<h2>Corporate</h2>
+						<h4>For large businesses that need to manage their employee's expenses</h4>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-12 price">
+						<h2>59.99/month</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 details">
+							<p>Unlimited employees</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+<!-- Footer -->
+<hr>
+<footer>
+	<div class="container-fluid">
+	  <div class="row">
+	    <div class="col-md-4">
+	      <ul>
+	        <li><strong>Navigation</strong></li>
+	        <li><%= link_to 'Who we are', root_url %></li>
+	        <li><%= link_to 'Services', root_url %></li>
+	      </ul>
+	      <ul>
+	        <li><%= link_to 'Our team', root_url %></li>
+	        <li><%= link_to 'Contact', root_url %></li>
+	      </ul>
+	    </div>
+	    <div class="col-md-8">
+	      <ul>
+	        <li><strong>Questions?</strong></li>
+	        <li> <%= link_to 'Contact', root_url, class: 'button' %></li>
+	      </ul>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="col-md-4">
+	      <p class ="cw">&copy; Receipt Smart INC. 2014</p>
+	    </div>
+	   </div>
+	 </div>
+</footer>
