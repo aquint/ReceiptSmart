@@ -55,5 +55,5 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: basic_production
+  database: receipt_production
   pool: 5
