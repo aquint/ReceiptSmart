@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027145027) do
+ActiveRecord::Schema.define(version: 20141030165518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20141027145027) do
     t.integer  "user_id"
   end
 
+  add_index "receipts", ["created_at"], name: "index_receipts_on_created_at", using: :btree
   add_index "receipts", ["user_id"], name: "index_receipts_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
@@ -36,6 +37,11 @@ ActiveRecord::Schema.define(version: 20141027145027) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.string   "activation_digest"
+    t.boolean  "activated",         default: false
+    t.datetime "activated_at"
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
 end

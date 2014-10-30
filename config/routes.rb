@@ -1,4 +1,7 @@
 ReceiptBook::Application.routes.draw do
+  get "password_resets/new"
+  get "password_resets/edit"
+  get "account_activations/edit"
   get "sessions/new"
   root "static#home"
   get 'signup' => "users#new"
@@ -7,6 +10,8 @@ ReceiptBook::Application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
   resources :users
   resources :receipts, only: [:create, :destroy]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :account_activations, only: [:edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
