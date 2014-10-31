@@ -14,4 +14,14 @@
 		$.getScript(this.href);
 		return false;
 	});
+	
+	$('.receipt-image').hide();
+	$(document).on('click', '.show-receipt-image', function(){
+		$(this).parent().parent().next().find('.receipt-image').slideToggle();
+	});
 })();
+$(document).ajaxComplete(function(){
+
+	$('.receipt-image').hide();
+
+});

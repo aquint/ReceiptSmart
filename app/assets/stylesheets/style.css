@@ -137,7 +137,19 @@
 .show-receipts .receipts{
   width: 100%;
 }
-
+.show-receipts td{
+  border-bottom: 1px solid #dddddd;
+}
+.receipt-image{
+  height: 200px;
+}
+.receipt-image img{
+  max-height: 200px;
+  max-width: 100%
+}
+b.caret{
+  cursor: pointer;
+}
 /**** 
 ** Quick Facts Panel
 ****/
@@ -155,6 +167,18 @@
   float: right;
 }
 
+.quick-stats{
+  border: 2px dashed rgba(0,0,0,0.4);
+  margin: 20px;
+  padding: 10px;
+  padding-top: 0;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.quick-stats h3, .quick-stats h4{
+  color: rgba(255,255,255,0.8);
+}
 /******************************************************** 
 ** HOME PAGE
 ********************************************************/
@@ -253,6 +277,9 @@
 }
 .plan .price h2{
   color: #2e8bc9
+}
+.pagination{
+  margin-top: 10px;
 }
 
 /**** 

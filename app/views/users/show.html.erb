@@ -5,7 +5,13 @@
         <li class="active"><a href="#"><i class="fa fa-user"></i> <%= @user.name %></a></li>
         <li><a href="#">Reports</a></li>
         <li><a href="#">Analytics</a></li>
-        <li><a href="#">Export</a></li>
+        <li>
+        	<div class="quick-stats">
+        		<h3>Quick Stats</h3>
+        		<h4>Monthly Spending: $<%= @monthlytotal %></h4>
+        		<h4>Receipts this month: <br>100</h4>
+        	</div>
+        </li>
       </ul>
     </div>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 dash">
@@ -13,34 +19,15 @@
 			<h1>My Receipts <small>Overview</small></h1>
 			
 			<hr>
-			<div class="row">
-				<div class="col-md-8">
-					<div class="panel panel-primary">
-						<div class="panel-heading">
-							<i class="fa fa-calculator fa-5x"></i>
-							<h3>Quick Stats</h3>
-						</div>
-						<h3>Monthly spending: $<%= @monthlytotal %></h3>
-						<h3>Receipts this month: 100</h3>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<% if logged_in? %>
-					      <section class="receipt_form">
-					        <%= render 'shared/receipt_form' %>
-					      </section>
-					<% end %>
-				</div>
-			</div>
-			<hr>
+			
 			<div class="row">
 				<div class="col-md-12 search">
 					<%= render 'receipts/search'%>
 				</div>
 			</div>
-			<hr>
 			<div class="row">
 				<div class="col-md-12">
+					<h3>Receipts (<%= @user.receipts.count %>)</h3>
 					<div class="row">
 						<div class="col-md-12">
 							<h4>Filters</h4>
@@ -66,10 +53,30 @@
 							</select>
 						</div>
 						<div class="col-md-3">
-							<h5>Month</h5>
+							<label>Month</label>
+							<select value="">
+								<option></option>
+								<option>January</option>
+								<option>February</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
 						</div>
 						<div class="col-md-3">
-							<h5>Sort</h5>
+							<label>Sort</label>
+							<select value="">
+								<option></option>
+								<option>Date: Ascending</option>
+								<option>Date: Descending</option>
+							</select>
 						</div>
 					</div>
 				</div>
@@ -79,6 +86,44 @@
 			    		<%= render 'users/show_receipts' %>
 			  </div>
 			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<% if logged_in? %>
+					      <section class="receipt_form">
+					        <%= render 'shared/receipt_form' %>
+					      </section>
+					<% end %>
+				</div>
+			</div>
+			<hr>
+			<footer>
+				<div class="container-fluid">
+				  <div class="row">
+				    <div class="col-md-4">
+				      <ul>
+				        <li><strong>Navigation</strong></li>
+				        <li><%= link_to 'Who we are', root_url %></li>
+				        <li><%= link_to 'Services', root_url %></li>
+				      </ul>
+				      <ul>
+				        <li><%= link_to 'Our team', root_url %></li>
+				        <li><%= link_to 'Contact', root_url %></li>
+				      </ul>
+				    </div>
+				    <div class="col-md-8">
+				      <ul>
+				        <li><strong>Questions?</strong></li>
+				        <li> <%= link_to 'Contact', root_url, class: 'button' %></li>
+				      </ul>
+				    </div>
+				  </div>
+				  <div class="row">
+				    <div class="col-md-4">
+				      <p class ="cw">&copy; Receipt Smart INC. 2014</p>
+				    </div>
+				   </div>
+				 </div>
+			</footer>
 		</div>
 	</div>
 </div>

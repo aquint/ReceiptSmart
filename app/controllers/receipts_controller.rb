@@ -14,6 +14,6 @@ class ReceiptsController < ApplicationController
   	end
   	private
   		def receipt_params
-  			params.require(:receipt).permit(:store, :credit_card, :subtotal, :total, :card_num)
+  			params.require(:receipt).permit(:store, :credit_card, :subtotal, :total, :card_num, :image)
   		end
 end

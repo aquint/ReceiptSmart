@@ -11,5 +11,7 @@
   <div class="form-group">
     <%= f.number_field :total, min: 0, step: 0.01, placeholder: "Total", class: "form-control" %>
   </div>
+  <%= f.label :remote_image_url, "or image URL" %>
+    <%= f.file_field :image %>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>

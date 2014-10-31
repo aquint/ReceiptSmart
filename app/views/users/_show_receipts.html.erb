@@ -1,5 +1,4 @@
 <% if @user.receipts.any? %>
-	  <h3>Receipts (<%= @user.receipts.count %>)</h3>
 	  <%= will_paginate @receipts %>
 	  <div class="panel panel-default">
 		  <table class="receipts table">
@@ -15,8 +14,11 @@
 				    	<td><%= l receipt.created_at, format: :short %></td>
 				      	<td><%= receipt.store %></td>
 				        <td><%= receipt.credit_card %></td>
-				        <td><%= receipt.subtotal %></td>
-				        <td><%= receipt.total %></td>
+				        <td>$<%= receipt.subtotal %></td>
+				        <td>$<%= receipt.total %> <b class="show-receipt-image caret"></b></td>
+				    </tr>
+				    <tr>
+				    	<td class="receipt-image"><img src="<%= receipt.image %>"></td>
 				    </tr>
 				<% end %>
 		  </table>
