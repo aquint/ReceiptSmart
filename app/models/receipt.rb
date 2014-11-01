@@ -6,7 +6,6 @@ class Receipt < ActiveRecord::Base
   	validates :subtotal, presence: true
   	validates :total, presence: true
   	validates :store, presence: true
-  	validates :credit_card, presence: true
 
   	def self.filter(query,param)
       
