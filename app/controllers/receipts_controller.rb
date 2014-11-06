@@ -7,7 +7,8 @@ class ReceiptsController < ApplicationController
 			flash[:sucess] = "Receipt created!"
 			redirect_to user_path(current_user)
 		else
-			render 'static/home'
+			flash[:danger] = "One or more required fields are empty."
+			redirect_to user_path(current_user)
 		end
 	end
 	def destroy

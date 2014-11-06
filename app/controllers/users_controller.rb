@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 	def new
+		@email = params[:email]
 		@user = User.new
 	end
 	def create

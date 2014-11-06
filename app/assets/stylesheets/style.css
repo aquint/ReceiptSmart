@@ -195,7 +195,7 @@ b.caret{
 ****/
 
 .jumbotron{
-  background: url(/assets/receipt.jpg);
+  background: url(/assets/banner3.jpg);
   background-size: cover;
   height: 500px;
   margin-top: 50px;
@@ -297,4 +297,22 @@ footer li{
 }
 footer ul{
   display: inline-block;
+}
+/******************************************************** 
+** Sign Up and Log In
+********************************************************/
+.signup input{
+  margin-bottom: 15px;
+}
+.signup form{
+  margin-top: 25px;
+}
+.login-main input{
+  margin-bottom: 15px;
+}
+.login-main form{
+  margin-top: 25px;
+}
+.alert{
+  margin-top: 50px;
 }
