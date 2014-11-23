@@ -70,6 +70,12 @@
     padding-top: 0;
   }
 }
+@media (max-width: 768px) {
+  .app-stores .col-md-2 img{
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 /* Sidebar navigation */
 .nav-sidebar {
@@ -298,6 +304,9 @@ footer li{
 footer ul{
   display: inline-block;
 }
+
+
+
 /******************************************************** 
 ** Sign Up and Log In
 ********************************************************/
